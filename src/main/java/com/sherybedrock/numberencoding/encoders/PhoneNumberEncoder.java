@@ -1,8 +1,8 @@
-package com.bipinet.numberencoding.encoders;
+package com.sherybedrock.numberencoding.encoders;
 
 
-import com.bipinet.numberencoding.entities.number.EncodedNumber;
-import com.bipinet.numberencoding.mapping.NumberToWordMapping;
+import com.sherybedrock.numberencoding.entities.number.EncodedNumber;
+import com.sherybedrock.numberencoding.mapping.NumberToWordMapping;
 
 import java.util.*;
 
@@ -50,80 +50,21 @@ public final class PhoneNumberEncoder implements NumberEncoder {
      resolved by the following example. (Still remaining ambiguities are
      intended degrees of freedom.)
 
-     <p>Sample dictionary:
-     <pre>
-     an
-     blau
-     Bo"
-     Boot
-     bo"s
-     da
-     Fee
-     fern
-     Fest
-     fort
-     je
-     jemand
-     mir
-     Mix
-     Mixer
-     Name
-     neu
-     o"d
-     Ort
-     so
-     Tor
-     Torf
-     Wasser
-     </pre>
      <p>Sample phone number lists:
 
-     112
-     5624-82
-     4824
-     0721/608-4067
-     10/783--5
-     1078-913-5
-     381482
-     04824
+	 6146795
+	 059-4-5-3336
+	 33548-7572
+	 08-3-7-1823
 
      <p>Corresponding correct program output (on screen):
      <pre>
-     5624-82: mir Tor
-     5624-82: Mix Tor
-     4824: Torf
-     4824: fort
-     4824: Tor 4
-     10/783--5: neu o"d 5
-     10/783--5: je bo"s 5
-     10/783--5: je Bo" da
-     381482: so 1 Tor
-     04824: 0 Torf
-     04824: 0 fort
-     04824: 0 Tor 4
-     </pre>
-     <p>Any other output would be wrong (except for different ordering of the
-     lines).
-
-     <p>Wrong outputs for the above example would be e.g.
-
-     <pre>
-     562482: Mix Tor, because the formatting of the phone number is
-     incorrect,
-
-     10/783--5: je bos 5, because the formatting of the second word is
-     incorrect,
-
-     4824: 4 Ort, because in place of the first digit the words Torf, fort,
-     Tor could be used,
-
-     1078-913-5: je Bo" 9 1 da , since there are two subsequent digits in the
-     encoding,
-
-     04824: 0 Tor , because the encoding does not cover the whole phone
-     number, and
-
-     5624-82: mir Torf , because the encoding is longer than the phone number.
+     059-4-5-3336:any w ed d"ug
+	 059-4-5-3336:any w ed duo
+	 08-3-7-1823:aid 7 fib 3
+	 08-3-7-1823:aid 7 f"it 3
+	 08-3-7-1823:aid 7 mild
+	 08-3-7-1823:aid 7 m ilk
      </pre>
 
      * @param number {@link String} with the number to be encoded.
@@ -154,13 +95,11 @@ public final class PhoneNumberEncoder implements NumberEncoder {
      *                    was encoded as a numeric character [0-9].
      * @return {@link Collection} of encoded numbers as {@link String}.
      */
-    private final Collection<String> encodeNumber(
-            final String number, final int startIndex, final boolean isLeftDigit) {
+    private final Collection<String> encodeNumber(final String number, final int startIndex, final boolean isLeftDigit) {
         Collection<String> encodedNumbers = new ArrayList<>();
         for (int currentIndex = startIndex; currentIndex < number.length(); currentIndex++) {
             final String currentNumber = number.substring(startIndex, currentIndex + 1);
-            final List<String> words = Collections.unmodifiableList((List<String>) numberToWordMapping.getWords(
-                    currentNumber));
+            final List<String> words = Collections.unmodifiableList((List<String>) numberToWordMapping.getWords(currentNumber));
             final boolean isCurrentDigit = (currentNumber.length() == 1) ? true : false;
             final boolean isCurrentLastDigit = (currentIndex == number.length() - 1) ? true : false;
             final Collection<String> partlyEncodedNumbers;
@@ -200,8 +139,7 @@ public final class PhoneNumberEncoder implements NumberEncoder {
      * @param partlyEncodedNumbers a {@link Collection} of encoded numbers as strings.
      * @return a {@link Collection} root and partly encoded numbers.
      */
-    final static Collection<String> buildEncodedNumberStrings(
-            final String root, final Collection<String> partlyEncodedNumbers){
+    final static Collection<String> buildEncodedNumberStrings(final String root, final Collection<String> partlyEncodedNumbers){
         final Collection<String> encodedNumberStrings = new ArrayList<>();
         for (String partlyEncodedNumber : partlyEncodedNumbers) {
             StringBuilder encodedNumberBuilder = new StringBuilder();

@@ -11,7 +11,7 @@ Example:
 *  Windows ```-d C:\temp\dictionary.txt -i C:\temp\input.txt```
 *  Linux ```-d /tmp/dictionary.txt -i /tmp/input.txt```
 
-From IDE execute *com.bipinet.numberencoding.lists.EncodedPhoneNumberList.main()* passing the required arguments.
+From IDE execute *com.sherybedrock.numberencoding.lists.EncodedPhoneNumberList.main()* passing the required arguments.
 
 Alternatively build with Maven ```mvn clean install``` and execute in the terminal 
 ```java -jar number-encoding-1.0-SNAPSHOT.jar -d path_to_dictionary -i path_to_phone_numbers_file``` 

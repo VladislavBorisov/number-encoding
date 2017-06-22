@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.mapping;
+package com.sherybedrock.numberencoding.mapping;
 
 
 import java.util.Collection;

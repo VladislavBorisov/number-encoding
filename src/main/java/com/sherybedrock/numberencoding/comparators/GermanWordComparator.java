@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.comparators;
+package com.sherybedrock.numberencoding.comparators;
 
 
 import java.util.Comparator;

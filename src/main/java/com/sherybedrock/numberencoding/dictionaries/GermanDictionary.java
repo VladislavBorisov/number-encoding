@@ -1,11 +1,11 @@
-package com.bipinet.numberencoding.dictionaries;
-
-import com.bipinet.numberencoding.validators.dictionary.DictionaryValidator;
+package com.sherybedrock.numberencoding.dictionaries;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
+
+import com.sherybedrock.numberencoding.validators.dictionary.DictionaryValidator;
 
 /**
  * German dictionary implementation.

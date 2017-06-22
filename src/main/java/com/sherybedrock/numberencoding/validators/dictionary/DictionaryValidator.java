@@ -1,6 +1,6 @@
-package com.bipinet.numberencoding.validators.dictionary;
+package com.sherybedrock.numberencoding.validators.dictionary;
 
-import com.bipinet.numberencoding.dictionaries.AbstractDictionary;
+import com.sherybedrock.numberencoding.dictionaries.AbstractDictionary;
 
 /**
  * Defines validation methods to be implemented for the {@link AbstractDictionary} validation.

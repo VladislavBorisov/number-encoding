@@ -1,8 +1,8 @@
-package com.bipinet.numberencoding.encoders;
-
-import com.bipinet.numberencoding.entities.number.EncodedNumber;
+package com.sherybedrock.numberencoding.encoders;
 
 import java.util.Collection;
+
+import com.sherybedrock.numberencoding.entities.number.EncodedNumber;
 
 /**
  * Interface providing a contract for the implementing encoders.

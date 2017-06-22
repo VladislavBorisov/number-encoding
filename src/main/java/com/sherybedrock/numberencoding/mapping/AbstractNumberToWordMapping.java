@@ -1,8 +1,8 @@
-package com.bipinet.numberencoding.mapping;
-
-import com.bipinet.numberencoding.dictionaries.Dictionary;
+package com.sherybedrock.numberencoding.mapping;
 
 import java.util.*;
+
+import com.sherybedrock.numberencoding.dictionaries.Dictionary;
 
 /**
  * Provides an implementation of the {@link NumberToWordMapping} that maps all the words in the {@link Dictionary}
@@ -13,10 +13,8 @@ public abstract class AbstractNumberToWordMapping implements NumberToWordMapping
      * Map storing number to word mappings. Must be assigned a value at construction time and
      * should not be changed at runtime.
      */
-    protected final Map<String, Collection<String>> numberToWordMappingStore =
-            new HashMap<String, Collection<String>>();
+    protected final Map<String, Collection<String>> numberToWordMappingStore = new HashMap<String, Collection<String>>();
     private final Map<Integer, Set<String>> digitToLetterMapping;
-
 
     /**
      * Constructs {@link AbstractNumberToWordMapping} with the {@link #numberToWordMappingStore}.

@@ -1,7 +1,7 @@
-package com.bipinet.numberencoding.validators.dictionary;
+package com.sherybedrock.numberencoding.validators.dictionary;
 
 
-import com.bipinet.numberencoding.dictionaries.AbstractDictionary;
+import com.sherybedrock.numberencoding.dictionaries.AbstractDictionary;
 
 public class GermanDictionaryValidator extends AbstractDictionaryValidator {
 
@@ -16,38 +16,45 @@ public class GermanDictionaryValidator extends AbstractDictionaryValidator {
     @Override
     public boolean isWordValid(AbstractDictionary dictionary, String word) {
         //First validate word length and if valid and perform further validation.
-        if (!super.isWordValid(dictionary, word)) return false;
-        for (int i = 0; i < word.length(); i++) {
-            char currentChar = word.charAt(i);
-            //Validate that the word starts with a letter [a-zA-Z]
-            if (i == 0) {
-                if (!super.isASCIILetter(currentChar)) {
-                    return false;
-                }
-            }
-            if (i > 0) {
-                if (currentChar == '"') {
-                    //Validate that the double-quotes encode umlaut characters [AaOoUu]
-                    char previousChar = word.charAt(i - 1);
-                    //If previous character is not a letter [AaOoUu] return false.
-                    if (((!super.isASCIILetter(previousChar)) &&
-                            ((Character.toUpperCase(previousChar) != 'A') ||
-                                    (Character.toUpperCase(previousChar) != 'O') ||
-                                    (Character.toUpperCase(previousChar) != 'E'))
-                    )) return false;
-                    //Next character must be a letter [a-zA-Z]
-                    //Do not validate if this is the last char in the word
-                    if (i != (word.length() - 1)) {
-                        char nextChar = word.charAt(i + 1);
-                        if (!super.isASCIILetter(nextChar)) return false;
-                    }
-
-                    //if current char is not a double quote then validate if it is is a letter [a-zA-Z]
-                } else if (!super.isASCIILetter(currentChar)) {
-                    return false;
-                }
-            }
-        }
+//        if (!super.isWordValid(dictionary, word)) return false;
+//        for (int i = 0; i < word.length(); i++) {
+//            char currentChar = word.charAt(i);
+//            //Validate that the word starts with a letter [a-zA-Z]
+//            if (i == 0) {
+//                if (!super.isASCIILetter(currentChar)) {
+//                    return false;
+//                }
+//            }
+//            if (i > 0) {
+//            	if (Character.isWhitespace(currentChar)) {
+//					continue;
+//				}
+//                if (currentChar == '"') {
+//                    //Validate that the double-quotes encode umlaut characters [AaOoUu]
+//                    char previousChar = word.charAt(i - 1);
+//                    //If previous character is not a letter [AaOoUu] return false.
+//                	if (Character.isWhitespace(previousChar)) {
+//    					continue;
+//    				}
+//                    if (((!super.isASCIILetter(previousChar)) &&
+//                            ((Character.toUpperCase(previousChar) != 'A') ||
+//                                    (Character.toUpperCase(previousChar) != 'O') ||
+//                                    (Character.toUpperCase(previousChar) != 'E')
+//                                    )
+//                    )) return false;
+//                    //Next character must be a letter [a-zA-Z]
+//                    //Do not validate if this is the last char in the word
+//                    if (i != (word.length() - 1)) {
+//                        char nextChar = word.charAt(i + 1);
+//                        if (!super.isASCIILetter(nextChar)) return false;
+//                    }
+//
+//                    //if current char is not a double quote then validate if it is is a letter [a-zA-Z]
+//                } else if (!super.isASCIILetter(currentChar)) {
+//                    return false;
+//                }
+//            }
+//        }
         return true;
     }
 

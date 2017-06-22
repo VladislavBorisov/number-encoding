@@ -1,6 +1,6 @@
-package com.bipinet.numberencoding.lists;
+package com.sherybedrock.numberencoding.lists;
 
-import com.bipinet.numberencoding.validators.number.NumberValidator;
+import com.sherybedrock.numberencoding.validators.number.NumberValidator;
 
 /**
  * Abstract implementation of the {@link NumberList} providing the core functionality that

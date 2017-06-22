@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.helpers;
+package com.sherybedrock.numberencoding.helpers;
 
 
 import java.io.File;

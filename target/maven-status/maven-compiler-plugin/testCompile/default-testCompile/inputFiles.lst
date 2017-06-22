@@ -1,0 +1,12 @@
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\helpers\TestHelpers.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\mapping\PhoneNumberToWordMappingTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\comparators\GermanWordComparatorTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\dictionaries\GermanDictionaryTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\validators\dictionary\GermanDictionaryValidatorTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\validators\number\PhoneNumberValidatorTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\parameters\ParametersTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\encoders\PhoneNumberEncoderTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\validators\number\AbstractNumberValidatorTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\lists\EncodedPhoneNumberListTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\validators\dictionary\AbstractDictionaryValidatorTest.java
+D:\workspace_sts\number-encoding\src\test\java\com\sherybedrock\numberencoding\entities\number\EncodedNumberTest.java

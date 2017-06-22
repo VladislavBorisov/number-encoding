@@ -1,9 +1,9 @@
-package com.bipinet.numberencoding.mapping;
+package com.sherybedrock.numberencoding.mapping;
 
-
-import com.bipinet.numberencoding.parameters.Parameters;
 
 import java.util.*;
+
+import com.sherybedrock.numberencoding.parameters.Parameters;
 
 public class PhoneNumberToWordMapping extends AbstractNumberToWordMapping {
     /**

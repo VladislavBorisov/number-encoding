@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.entities.number;
+package com.sherybedrock.numberencoding.entities.number;
 
 /**
  * Wraps a {@link String} number.

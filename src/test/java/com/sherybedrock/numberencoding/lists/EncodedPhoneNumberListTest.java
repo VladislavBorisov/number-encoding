@@ -1,14 +1,16 @@
-package com.bipinet.numberencoding.lists;
+package com.sherybedrock.numberencoding.lists;
 
 
-import com.bipinet.numberencoding.dictionaries.AbstractDictionary;
-import com.bipinet.numberencoding.encoders.NumberEncoder;
-import com.bipinet.numberencoding.helpers.TestHelpers;
-import com.bipinet.numberencoding.entities.number.EncodedNumber;
-import com.bipinet.numberencoding.mapping.PhoneNumberToWordMapping;
-import com.bipinet.numberencoding.parameters.Parameters;
-import com.bipinet.numberencoding.validators.dictionary.AbstractDictionaryValidator;
-import com.bipinet.numberencoding.validators.number.PhoneNumberValidator;
+import com.sherybedrock.numberencoding.dictionaries.AbstractDictionary;
+import com.sherybedrock.numberencoding.encoders.NumberEncoder;
+import com.sherybedrock.numberencoding.entities.number.EncodedNumber;
+import com.sherybedrock.numberencoding.helpers.TestHelpers;
+import com.sherybedrock.numberencoding.lists.EncodedPhoneNumberList;
+import com.sherybedrock.numberencoding.mapping.PhoneNumberToWordMapping;
+import com.sherybedrock.numberencoding.parameters.Parameters;
+import com.sherybedrock.numberencoding.validators.dictionary.AbstractDictionaryValidator;
+import com.sherybedrock.numberencoding.validators.number.PhoneNumberValidator;
+
 import org.junit.Test;
 
 import java.io.File;

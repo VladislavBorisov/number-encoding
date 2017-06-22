@@ -1,6 +1,4 @@
-package com.bipinet.numberencoding.entities.number;
-
-import java.lang.*;
+package com.sherybedrock.numberencoding.entities.number;
 
 /**
  * Represents an encoded number and provides specific method implementations.

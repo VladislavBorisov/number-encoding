@@ -1,6 +1,9 @@
-package com.bipinet.numberencoding.validators.dictionary;
+package com.sherybedrock.numberencoding.validators.dictionary;
 
-import com.bipinet.numberencoding.dictionaries.AbstractDictionary;
+import com.sherybedrock.numberencoding.dictionaries.AbstractDictionary;
+import com.sherybedrock.numberencoding.validators.dictionary.AbstractDictionaryValidator;
+import com.sherybedrock.numberencoding.validators.dictionary.DictionaryValidator;
+
 import org.junit.Test;
 import java.util.Arrays;
 

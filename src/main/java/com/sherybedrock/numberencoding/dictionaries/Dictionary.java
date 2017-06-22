@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.dictionaries;
+package com.sherybedrock.numberencoding.dictionaries;
 
 /**
  * Interface for different implementations of the dictionaries.

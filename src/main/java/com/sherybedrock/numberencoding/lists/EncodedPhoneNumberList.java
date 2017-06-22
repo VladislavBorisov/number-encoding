@@ -1,17 +1,17 @@
-package com.bipinet.numberencoding.lists;
+package com.sherybedrock.numberencoding.lists;
 
-import com.bipinet.numberencoding.comparators.GermanWordComparator;
-import com.bipinet.numberencoding.dictionaries.Dictionary;
-import com.bipinet.numberencoding.dictionaries.GermanDictionary;
-import com.bipinet.numberencoding.encoders.NumberEncoder;
-import com.bipinet.numberencoding.encoders.PhoneNumberEncoder;
-import com.bipinet.numberencoding.mapping.NumberToWordMapping;
-import com.bipinet.numberencoding.mapping.PhoneNumberToWordMapping;
-import com.bipinet.numberencoding.parameters.Parameters;
-import com.bipinet.numberencoding.utils.CommandLineUtils;
-import com.bipinet.numberencoding.validators.dictionary.GermanDictionaryValidator;
-import com.bipinet.numberencoding.validators.number.PhoneNumberValidator;
-import com.bipinet.numberencoding.validators.number.NumberValidator;
+import com.sherybedrock.numberencoding.comparators.GermanWordComparator;
+import com.sherybedrock.numberencoding.dictionaries.Dictionary;
+import com.sherybedrock.numberencoding.dictionaries.GermanDictionary;
+import com.sherybedrock.numberencoding.encoders.NumberEncoder;
+import com.sherybedrock.numberencoding.encoders.PhoneNumberEncoder;
+import com.sherybedrock.numberencoding.mapping.NumberToWordMapping;
+import com.sherybedrock.numberencoding.mapping.PhoneNumberToWordMapping;
+import com.sherybedrock.numberencoding.parameters.Parameters;
+import com.sherybedrock.numberencoding.utils.CommandLineUtils;
+import com.sherybedrock.numberencoding.validators.dictionary.GermanDictionaryValidator;
+import com.sherybedrock.numberencoding.validators.number.NumberValidator;
+import com.sherybedrock.numberencoding.validators.number.PhoneNumberValidator;
 
 import java.io.*;
 import java.util.List;
@@ -129,8 +129,7 @@ public class EncodedPhoneNumberList extends AbstractNumberList {
         if (!germanDictionary.load(pathToDictionaryFile))
             System.exit(1);
         //Map the dictionary words to numbers.
-        PhoneNumberToWordMapping phoneNumberToWordMapping = new PhoneNumberToWordMapping(
-                Parameters.DIGIT_TO_LETTER_MAPPING);
+        PhoneNumberToWordMapping phoneNumberToWordMapping = new PhoneNumberToWordMapping(Parameters.DIGIT_TO_LETTER_MAPPING);
         phoneNumberToWordMapping.mapWords(germanDictionary.getDictionaryStore());
         //Load and encode the phone numbers from the input file.
         EncodedPhoneNumberList encodedPhoneNumberList = new EncodedPhoneNumberList(
@@ -169,24 +168,20 @@ public class EncodedPhoneNumberList extends AbstractNumberList {
     /**
      * Print usage instructions.
      */
-    private static void printUsage(){
-        StringBuilder usageBuilder = new StringBuilder();
-        String lineSeparator = System.getProperty("line.separator");
-        usageBuilder.append("Required arguments and values: ");
-        usageBuilder.append(String.format(
-                "-%s <absolute path without spaces to the dictionary file> ", arguments.d));
-        usageBuilder.append(String.format(
-                "-%s <absolute path without spaces to the input file with phone numbers> ", arguments.i));
-        usageBuilder.append(lineSeparator);
-        usageBuilder.append("Example:");
-        usageBuilder.append(lineSeparator);
-        usageBuilder.append(String.format(
-                "  * Windows -%s C:\\temp\\dictionary.txt -%s C:\\temp\\input.txt", arguments.d, arguments.i));
-        usageBuilder.append(lineSeparator);
-        usageBuilder.append(String.format(
-                "  * Linux -%s /tmp/dictionary.txt -%s /tmp/input.txt", arguments.d, arguments.i));
-        System.out.println(usageBuilder.toString());
-    }
+	private static void printUsage() {
+		StringBuilder usageBuilder = new StringBuilder();
+		String lineSeparator = System.getProperty("line.separator");
+		usageBuilder.append("Required arguments and values: ");
+		usageBuilder.append(String.format("-%s <absolute path without spaces to the dictionary file> ", arguments.d));
+		usageBuilder.append(String.format("-%s <absolute path without spaces to the input file with phone numbers> ", arguments.i));
+		usageBuilder.append(lineSeparator);
+		usageBuilder.append("Example:");
+		usageBuilder.append(lineSeparator);
+		usageBuilder.append(String.format("  * Windows -%s C:\\temp\\dictionary.txt -%s C:\\temp\\input.txt",arguments.d, arguments.i));
+		usageBuilder.append(lineSeparator);
+		usageBuilder.append(String.format("  * Linux -%s /tmp/dictionary.txt -%s /tmp/input.txt", arguments.d, arguments.i));
+		System.out.println(usageBuilder.toString());
+	}
 
     /**
      * Main method to initialise the phone number encoding.

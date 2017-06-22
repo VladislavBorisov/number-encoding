@@ -1,7 +1,9 @@
-package com.bipinet.numberencoding.entities.number;
+package com.sherybedrock.numberencoding.entities.number;
 
 
 import org.junit.Test;
+
+import com.sherybedrock.numberencoding.entities.number.EncodedNumber;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

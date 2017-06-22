@@ -1,6 +1,9 @@
-package com.bipinet.numberencoding.validators.number;
+package com.sherybedrock.numberencoding.validators.number;
 
 import org.junit.Test;
+
+import com.sherybedrock.numberencoding.validators.number.NumberValidator;
+import com.sherybedrock.numberencoding.validators.number.PhoneNumberValidator;
 
 public class PhoneNumberValidatorTest {
 

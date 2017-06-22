@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.lists;
+package com.sherybedrock.numberencoding.lists;
 
 /**
  * Provide a contract for loading and processing number lists.

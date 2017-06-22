@@ -1,6 +1,9 @@
-package com.bipinet.numberencoding.validators.number;
+package com.sherybedrock.numberencoding.validators.number;
 
 import org.junit.Test;
+
+import com.sherybedrock.numberencoding.validators.number.AbstractNumberValidator;
+import com.sherybedrock.numberencoding.validators.number.NumberValidator;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertTrue;

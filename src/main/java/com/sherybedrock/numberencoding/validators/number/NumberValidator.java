@@ -1,4 +1,4 @@
-package com.bipinet.numberencoding.validators.number;
+package com.sherybedrock.numberencoding.validators.number;
 
 public interface NumberValidator {
     /**
